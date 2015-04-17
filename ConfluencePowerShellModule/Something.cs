@@ -1,30 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Management.Automation;
+﻿using System.Management.Automation;
 
 namespace ConfluencePowerShellModule
 {
     [Cmdlet(VerbsCommon.Get, "Spaces")]
-    public class GetSpaces : PSCmdlet
+    public class GetSpaces : ConfluencePSCmdlet
+    {
+        protected override void ProcessRecord()
+        {
+            var spaces = Service.GetSpaces(AuthToken);
+            WriteObject(spaces);
+        }
+    }
+
+    [Cmdlet(VerbsCommon.Get, "Space")]
+    public class GetSpace : ConfluencePSCmdlet
     {
         [Parameter(
             Mandatory = true,
-            Position = 0,
-            HelpMessage = "Provide the AuthToken issued by calling Get-AuthToken")]
-        public string AuthToken { get; set; }
-
-        private ConfluenceServiceWrapper _wrapper;
-
-        protected override void BeginProcessing()
-        {
-            _wrapper = new ConfluenceServiceWrapper();
-        }
+            HelpMessage = "The unique key identifing the space key")]
+        public string SpaceKey { get; set; }
 
         protected override void ProcessRecord()
         {
-            _wrapper.GetSpaces(AuthToken);
+            var spaces = Service.GetSpace(AuthToken, SpaceKey);
+            WriteObject(spaces);
         }
     }
 }
