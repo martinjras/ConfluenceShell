@@ -3,10 +3,9 @@
 namespace ConfluencePowerShellModule.BaseCmdlets
 {
     // ReSharper disable once InconsistentNaming
-    public class ConfluencePSCmdlet : PSCmdlet
+    public class ConfluencePSCmdletBase : PSCmdlet
     {
-        [Parameter(Mandatory = true,
-            HelpMessage = "Get a ConfluenceConnection by calling Get-ConfluenceConnection")]
+        [Parameter(Mandatory = true, HelpMessage = "Get a ConfluenceConnection by calling Get-ConfluenceConnection")]
         public ConfluenceConnection Connection { get; set; }
 
         protected ConfluenceServiceWrapper Service;

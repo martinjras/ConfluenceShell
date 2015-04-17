@@ -29,6 +29,16 @@ namespace ConfluencePowerShellModule
             return _service.getSpace(_authToken, spaceKey);
         }
 
+        public RemoteSpace AddSpaceWithDefaultPermissions(RemoteSpace remoteSpace)
+        {
+            return _service.addSpaceWithDefaultPermissions(_authToken, remoteSpace);
+        }
+
+        public bool RemoveSpace(string spaceKey)
+        {
+            return _service.removeSpace(_authToken, spaceKey);
+        }
+
         public string Login(string username, string password)
         {
             return _service.login(username, password);

@@ -1,15 +1,15 @@
 ﻿using System.Management.Automation;
 using ConfluencePowerShellModule.BaseCmdlets;
+using ConfluencePowerShellModule.Naming;
 
 namespace ConfluencePowerShellModule
 {
-    [Cmdlet(VerbsCommon.Get, "Spaces")]
-    public class GetSpaces : ConfluencePSCmdletBase
+    [Cmdlet(VerbsCommon.Remove, Noun.Space)]
+    public class RemoveSpace : SpacePsCmdletBase
     {
         protected override void ProcessRecord()
         {
-            var spaces = Service.GetSpaces();
-            WriteObject(spaces);
+            WriteObject(Service.RemoveSpace(SpaceKey));
         }
     }
 }

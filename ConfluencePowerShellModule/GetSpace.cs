@@ -1,16 +1,12 @@
 ﻿using System.Management.Automation;
 using ConfluencePowerShellModule.BaseCmdlets;
+using ConfluencePowerShellModule.Naming;
 
 namespace ConfluencePowerShellModule
 {
-    [Cmdlet(VerbsCommon.Get, "Space")]
-    public class GetSpace : ConfluencePSCmdlet
+    [Cmdlet(VerbsCommon.Get, Noun.Space)]
+    public class GetSpace : SpacePsCmdletBase
     {
-        [Parameter(
-            Mandatory = true,
-            HelpMessage = "The unique key identifing the space key")]
-        public string SpaceKey { get; set; }
-
         protected override void ProcessRecord()
         {
             var spaces = Service.GetSpace(SpaceKey);
