@@ -4,19 +4,34 @@ namespace ConfluencePowerShellModule
 {
     public class ConfluenceServiceWrapper
     {
-        private static ConfluenceSoapServiceService GetService()
+        private readonly string _authToken;
+        private readonly ConfluenceSoapServiceService _service;
+
+        public ConfluenceServiceWrapper(string serviceUrl, string authToken)
         {
-            return new ConfluenceSoapServiceService();
+            _authToken = authToken;
+            
+            _service = new ConfluenceSoapServiceService
+            {
+                Url = serviceUrl
+            };
         }
 
-        public RemoteSpaceSummary[] GetSpaces(string authToken)
+        public ConfluenceServiceWrapper(string serviceUrl) : this(serviceUrl, null) { }
+
+        public RemoteSpaceSummary[] GetSpaces()
         {
-            return GetService().getSpaces(authToken);
+            return _service.getSpaces(_authToken);
         }
 
-        public RemoteSpace GetSpace(string authToken, string spaceKey)
+        public RemoteSpace GetSpace(string spaceKey)
         {
-            return GetService().getSpace(authToken, spaceKey);
+            return _service.getSpace(_authToken, spaceKey);
+        }
+
+        public string Login(string username, string password)
+        {
+            return _service.login(username, password);
         }
     }
 }
