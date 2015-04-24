@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddPermissionToSpace.cs" />
     <Compile Include="BaseCmdlets\SpacePsCmdletBase.cs" />
     <Compile Include="Naming\Noun.cs" />
     <Compile Include="RemoveSpace.cs" />
@@ -72,9 +73,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ConfluenceWsdl\CONFLUENCE_soap.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
     <WebReferences Include="Web References\" />

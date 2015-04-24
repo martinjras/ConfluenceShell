@@ -2,6 +2,11 @@
 
 namespace ConfluencePowerShellModule
 {
+    /// <summary>
+    /// This class, serves as a wrapper for the XML-RPC endpoint available in Confluence.
+    /// More details on the individual operations can be on this url: 
+    /// https://developer.atlassian.com/confdev/confluence-rest-api/confluence-xml-rpc-and-soap-apis/remote-confluence-methods
+    /// </summary>
     public class ConfluenceServiceWrapper
     {
         private readonly string _authToken;
@@ -32,6 +37,12 @@ namespace ConfluencePowerShellModule
         public RemoteSpace AddSpaceWithDefaultPermissions(RemoteSpace remoteSpace)
         {
             return _service.addSpaceWithDefaultPermissions(_authToken, remoteSpace);
+        }
+
+
+        public bool AddPermissionToSpace(string permission, string entityName, string spaceKey)
+        {
+            return _service.addPermissionToSpace(_authToken, permission, entityName, spaceKey);
         }
 
         public bool RemoveSpace(string spaceKey)
