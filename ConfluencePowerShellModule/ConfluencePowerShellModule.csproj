@@ -7,8 +7,8 @@
     <ProjectGuid>{FC895819-8BCB-4E07-B0A3-A8A7C0A5CF3B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ConfluencePowerShellModule</RootNamespace>
-    <AssemblyName>ConfluencePowerShellModule</AssemblyName>
+    <RootNamespace>ConfluenceShell</RootNamespace>
+    <AssemblyName>ConfluenceShell</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -46,25 +46,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddPermissionToSpace.cs" />
+    <Compile Include="Cmdlets\AddPermissionToSpace.cs" />
     <Compile Include="BaseCmdlets\SpacePsCmdletBase.cs" />
+    <Compile Include="CmdletTypes\Space.cs" />
+    <Compile Include="CmdletTypes\SpaceKey.cs" />
     <Compile Include="Naming\Noun.cs" />
-    <Compile Include="RemoveSpace.cs" />
+    <Compile Include="Cmdlets\RemoveSpace.cs" />
     <Compile Include="BaseCmdlets\ConfluencePSCmdletBase.cs" />
     <Compile Include="ConfigurationProvider.cs" />
     <Compile Include="ConfluenceConnection.cs" />
     <Compile Include="ConfluenceServiceWrapper.cs" />
     <Compile Include="Extensions\SecureStringExtensions.cs" />
-    <Compile Include="GetConfluenceConnection.cs" />
-    <Compile Include="AddSpace.cs" />
-    <Compile Include="GetSpace.cs" />
+    <Compile Include="Cmdlets\GetConfluenceConnection.cs" />
+    <Compile Include="Cmdlets\AddSpace.cs" />
+    <Compile Include="Cmdlets\GetSpace.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="GetSpaces.cs" />
+    <Compile Include="Cmdlets\GetSpaces.cs" />
     <Compile Include="Web References\ConfluenceService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -100,70 +102,70 @@
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Web References\ConfluenceService\RemoteAttachment.datasource">
+    <None Include="Web References\ConfluenceService\RemoteAttachment1.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Web References\ConfluenceService\RemoteBlogEntry.datasource">
+    <None Include="Web References\ConfluenceService\RemoteBlogEntry1.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Web References\ConfluenceService\RemoteBlogEntrySummary.datasource">
+    <None Include="Web References\ConfluenceService\RemoteBlogEntrySummary1.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Web References\ConfluenceService\RemoteClusterInformation.datasource">
+    <None Include="Web References\ConfluenceService\RemoteClusterInformation1.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Web References\ConfluenceService\RemoteComment.datasource">
+    <None Include="Web References\ConfluenceService\RemoteComment1.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Web References\ConfluenceService\RemoteConfluenceUser.datasource">
+    <None Include="Web References\ConfluenceService\RemoteConfluenceUser1.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Web References\ConfluenceService\RemoteContentPermissionSet.datasource">
+    <None Include="Web References\ConfluenceService\RemoteContentPermissionSet1.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Web References\ConfluenceService\RemoteContentSummaries.datasource">
+    <None Include="Web References\ConfluenceService\RemoteContentSummaries1.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Web References\ConfluenceService\RemoteLabel.datasource">
+    <None Include="Web References\ConfluenceService\RemoteLabel1.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Web References\ConfluenceService\RemoteNodeStatus.datasource">
+    <None Include="Web References\ConfluenceService\RemoteNodeStatus1.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Web References\ConfluenceService\RemotePage.datasource">
+    <None Include="Web References\ConfluenceService\RemotePage1.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Web References\ConfluenceService\RemotePageHistory.datasource">
+    <None Include="Web References\ConfluenceService\RemotePageHistory1.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Web References\ConfluenceService\RemotePageSummary.datasource">
+    <None Include="Web References\ConfluenceService\RemotePageSummary1.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Web References\ConfluenceService\RemotePermission.datasource">
+    <None Include="Web References\ConfluenceService\RemotePermission1.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Web References\ConfluenceService\RemoteSearchResult.datasource">
+    <None Include="Web References\ConfluenceService\RemoteSearchResult1.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Web References\ConfluenceService\RemoteServerInfo.datasource">
+    <None Include="Web References\ConfluenceService\RemoteServerInfo1.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Web References\ConfluenceService\RemoteSpace.datasource">
+    <None Include="Web References\ConfluenceService\RemoteSpace1.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Web References\ConfluenceService\RemoteSpaceGroup.datasource">
+    <None Include="Web References\ConfluenceService\RemoteSpaceGroup1.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Web References\ConfluenceService\RemoteSpacePermissionSet.datasource">
+    <None Include="Web References\ConfluenceService\RemoteSpacePermissionSet1.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Web References\ConfluenceService\RemoteSpaceSummary.datasource">
+    <None Include="Web References\ConfluenceService\RemoteSpaceSummary1.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Web References\ConfluenceService\RemoteUser.datasource">
+    <None Include="Web References\ConfluenceService\RemoteUser1.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Web References\ConfluenceService\RemoteUserInformation.datasource">
+    <None Include="Web References\ConfluenceService\RemoteUserInformation1.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
   </ItemGroup>

@@ -1,8 +1,8 @@
-using System;
 using System.Management.Automation;
+using ConfluencePowerShellModule;
 using ConfluencePowerShellModule.Extensions;
 
-namespace ConfluencePowerShellModule
+namespace ConfluenceShell.Cmdlets
 {
     [Cmdlet(VerbsCommon.Get, "ConfluenceConnection")]
     public class GetConfluenceConnection : PSCmdlet

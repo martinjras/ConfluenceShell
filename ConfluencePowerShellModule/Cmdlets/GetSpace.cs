@@ -1,16 +1,17 @@
 ﻿using System.Management.Automation;
-using ConfluencePowerShellModule.BaseCmdlets;
 using ConfluencePowerShellModule.Naming;
+using ConfluenceShell.BaseCmdlets;
+using ConfluenceShell.CmdletTypes;
 
-namespace ConfluencePowerShellModule
+namespace ConfluenceShell.Cmdlets
 {
     [Cmdlet(VerbsCommon.Get, Noun.Space)]
     public class GetSpace : SpacePsCmdletBase
     {
         protected override void ProcessRecord()
         {
-            var spaces = Service.GetSpace(SpaceKey);
-            WriteObject(spaces);
+            var space = new Space(Service.GetSpace(SpaceKey));
+            WriteObject(space);
         }
     }
 }

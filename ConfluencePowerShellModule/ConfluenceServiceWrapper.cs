@@ -1,6 +1,6 @@
-﻿using ConfluencePowerShellModule.ConfluenceService;
+﻿using ConfluenceShell.ConfluenceService;
 
-namespace ConfluencePowerShellModule
+namespace ConfluenceShell
 {
     /// <summary>
     /// This class, serves as a wrapper for the XML-RPC endpoint available in Confluence.
@@ -38,7 +38,6 @@ namespace ConfluencePowerShellModule
         {
             return _service.addSpaceWithDefaultPermissions(_authToken, remoteSpace);
         }
-
 
         public bool AddPermissionToSpace(string permission, string entityName, string spaceKey)
         {

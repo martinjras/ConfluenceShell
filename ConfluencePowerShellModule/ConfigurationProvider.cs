@@ -1,4 +1,4 @@
-﻿namespace ConfluencePowerShellModule
+﻿namespace ConfluenceShell
 {
     public class ConfigurationProvider
     {

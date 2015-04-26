@@ -1,8 +1,8 @@
 ﻿using System.Management.Automation;
-using ConfluencePowerShellModule.BaseCmdlets;
 using ConfluencePowerShellModule.Naming;
+using ConfluenceShell.BaseCmdlets;
 
-namespace ConfluencePowerShellModule
+namespace ConfluenceShell.Cmdlets
 {
     [Cmdlet(VerbsCommon.Add, Noun.Permission + "To" + Noun.Space)]
     public class AddPermissionToSpace : SpacePsCmdletBase

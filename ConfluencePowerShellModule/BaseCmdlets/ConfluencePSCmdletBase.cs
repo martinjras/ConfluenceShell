@@ -1,6 +1,7 @@
 ﻿using System.Management.Automation;
+using ConfluencePowerShellModule;
 
-namespace ConfluencePowerShellModule.BaseCmdlets
+namespace ConfluenceShell.BaseCmdlets
 {
     // ReSharper disable once InconsistentNaming
     public class ConfluencePSCmdletBase : PSCmdlet

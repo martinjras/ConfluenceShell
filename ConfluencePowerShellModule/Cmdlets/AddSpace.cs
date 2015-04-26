@@ -1,9 +1,9 @@
 ﻿using System.Management.Automation;
-using ConfluencePowerShellModule.BaseCmdlets;
-using ConfluencePowerShellModule.ConfluenceService;
 using ConfluencePowerShellModule.Naming;
+using ConfluenceShell.BaseCmdlets;
+using ConfluenceShell.ConfluenceService;
 
-namespace ConfluencePowerShellModule
+namespace ConfluenceShell.Cmdlets
 {
     [Cmdlet(VerbsCommon.Add, Noun.Space)]
     public class AddSpace : SpacePsCmdletBase
