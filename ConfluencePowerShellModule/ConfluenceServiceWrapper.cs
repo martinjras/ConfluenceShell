@@ -1,4 +1,5 @@
-﻿using ConfluenceShell.ConfluenceService;
+﻿using ConfluenceShell.CmdletTypes;
+using ConfluenceShell.ConfluenceService;
 
 namespace ConfluenceShell
 {
@@ -67,6 +68,16 @@ namespace ConfluenceShell
         public string Login(string username, string password)
         {
             return _service.login(username, password);
+        }
+
+        public string GetSpaceStatus(string spaceKey)
+        {
+            return _service.getSpaceStatus(_authToken, spaceKey);
+        }
+
+        public bool SetSpaceStatus(string spaceKey, string status)
+        {
+            return _service.setSpaceStatus(_authToken, spaceKey, status);
         }
     }
 }
