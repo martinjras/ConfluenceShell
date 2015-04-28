@@ -1,6 +1,7 @@
 ﻿using System.Management.Automation;
-using ConfluencePowerShellModule.Naming;
 using ConfluenceShell.BaseCmdlets;
+using ConfluenceShell.CmdletTypes;
+using ConfluenceShell.Naming;
 
 namespace ConfluenceShell.Cmdlets
 {
@@ -8,14 +9,14 @@ namespace ConfluenceShell.Cmdlets
     public class AddPermissionToSpace : SpacePsCmdletBase
     {
         [Parameter(Mandatory = true)]
-        public string Permission { get; set; }
+        public SpaceLevelPermission Permission { get; set; }
 
         [Parameter(Mandatory = true)]
         public string EntityName { get; set; }
 
         protected override void ProcessRecord()
         {
-            WriteObject(Service.AddPermissionToSpace(Permission, EntityName, SpaceKey));
+            WriteObject(Service.AddPermissionToSpace(Permission.ToString().ToUpper(), EntityName, SpaceKey));
         }
     }
 }
