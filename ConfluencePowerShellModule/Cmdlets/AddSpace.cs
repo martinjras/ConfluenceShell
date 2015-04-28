@@ -1,7 +1,7 @@
 ﻿using System.Management.Automation;
-using ConfluencePowerShellModule.Naming;
 using ConfluenceShell.BaseCmdlets;
 using ConfluenceShell.ConfluenceService;
+using ConfluenceShell.Naming;
 
 namespace ConfluenceShell.Cmdlets
 {

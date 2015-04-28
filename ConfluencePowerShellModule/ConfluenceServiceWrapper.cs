@@ -44,6 +44,21 @@ namespace ConfluenceShell
             return _service.addPermissionToSpace(_authToken, permission, entityName, spaceKey);
         }
 
+        public bool AddPermissionsToSpace(string[] permissions, string entityName, string spaceKey)
+        {
+            return _service.addPermissionsToSpace(_authToken, permissions, entityName, spaceKey);
+        }
+
+        public RemoteSpacePermissionSet[] GetSpacePermissionSets(string spaceKey)
+        {
+            return _service.getSpacePermissionSets(_authToken, spaceKey);
+        }
+
+        public string[] GetSpaceLevelPermissions()
+        {
+            return _service.getSpaceLevelPermissions(_authToken);
+        }
+
         public bool RemoveSpace(string spaceKey)
         {
             return _service.removeSpace(_authToken, spaceKey);

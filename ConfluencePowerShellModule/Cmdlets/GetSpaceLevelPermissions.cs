@@ -4,12 +4,12 @@ using ConfluenceShell.Naming;
 
 namespace ConfluenceShell.Cmdlets
 {
-    [Cmdlet(VerbsCommon.Remove, Noun.Space)]
-    public class RemoveSpace : SpacePsCmdletBase
+    [Cmdlet(VerbsCommon.Get, Noun.Space + "LevelPermissions")]
+    public class GetSpaceLevelPermissions : ConfluencePSCmdletBase
     {
         protected override void ProcessRecord()
-        {
-            WriteObject(Service.RemoveSpace(SpaceKey));
+        {           
+            WriteObject(Service.GetSpaceLevelPermissions());
         }
     }
 }
