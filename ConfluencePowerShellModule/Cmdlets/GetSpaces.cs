@@ -10,11 +10,10 @@ namespace ConfluenceShell.Cmdlets
     {
         protected override void ProcessRecord()
         {
-            var spaces = Service.GetSpaces()
-                            .Select(s => new Space(s))
-                            .ToArray();
-
-            WriteObject(spaces);
+            foreach (var space in Service.GetSpaces().Select(s => new Space(s)))
+            {
+                WriteObject(space);
+            }
         }
     }
 }

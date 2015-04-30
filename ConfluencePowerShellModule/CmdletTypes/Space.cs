@@ -1,4 +1,5 @@
-﻿using ConfluenceShell.ConfluenceService;
+﻿using System;
+using ConfluenceShell.ConfluenceService;
 
 namespace ConfluenceShell.CmdletTypes
 {
@@ -7,14 +8,14 @@ namespace ConfluenceShell.CmdletTypes
         public SpaceKey SpaceKey { get; set; }
         public long HomePage { get; set; }
         public string Name { get; set; }
-        public string Type { get; set; }
+        public SpaceType Type { get; set; }
         public string Url { get; set; }
 
         internal Space(RemoteSpaceSummary space)
         {
             SpaceKey = space.key;
             Name = space.name;
-            Type = space.type;
+            Type = (SpaceType) Enum.Parse(typeof (SpaceType), space.type, true);
             Url = space.url;
 
             // if RemoteSpace, then extract additional information

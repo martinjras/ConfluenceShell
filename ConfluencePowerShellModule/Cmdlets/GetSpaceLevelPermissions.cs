@@ -8,8 +8,11 @@ namespace ConfluenceShell.Cmdlets
     public class GetSpaceLevelPermissions : ConfluencePSCmdletBase
     {
         protected override void ProcessRecord()
-        {           
-            WriteObject(Service.GetSpaceLevelPermissions());
+        {
+            foreach (var item in Service.GetSpaceLevelPermissions())
+            {
+                WriteObject(item);   
+            }
         }
     }
 }

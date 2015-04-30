@@ -59,6 +59,7 @@
     <Compile Include="CmdletTypes\Space.cs" />
     <Compile Include="CmdletTypes\SpaceKey.cs" />
     <Compile Include="CmdletTypes\SpaceLevelPermission.cs" />
+    <Compile Include="CmdletTypes\SpaceType.cs" />
     <Compile Include="Naming\Noun.cs" />
     <Compile Include="Cmdlets\RemoveSpace.cs" />
     <Compile Include="BaseCmdlets\ConfluencePSCmdletBase.cs" />
