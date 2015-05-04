@@ -50,6 +50,8 @@
     <Compile Include="Cmdlets\AddPermissionToSpace.cs" />
     <Compile Include="BaseCmdlets\SpacePsCmdletBase.cs" />
     <Compile Include="Cmdlets\EntityType.cs" />
+    <Compile Include="Cmdlets\GetUsers.cs" />
+    <Compile Include="Cmdlets\GetUser.cs" />
     <Compile Include="Cmdlets\SetSpaceStatus.cs" />
     <Compile Include="Cmdlets\GetSpaceStatus.cs" />
     <Compile Include="Cmdlets\GetSpacePermissionSets.cs" />
@@ -60,6 +62,7 @@
     <Compile Include="CmdletTypes\SpaceKey.cs" />
     <Compile Include="CmdletTypes\SpaceLevelPermission.cs" />
     <Compile Include="CmdletTypes\SpaceType.cs" />
+    <Compile Include="CmdletTypes\User.cs" />
     <Compile Include="Naming\Noun.cs" />
     <Compile Include="Cmdlets\RemoveSpace.cs" />
     <Compile Include="BaseCmdlets\ConfluencePSCmdletBase.cs" />

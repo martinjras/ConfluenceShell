@@ -65,6 +65,16 @@ namespace ConfluenceShell
             return _service.getSpaceLevelPermissions(_authToken);
         }
 
+        public RemoteUser GetUser(string userName)
+        {
+            return _service.getUser(_authToken, userName);
+        }
+
+        public string[] GetUsers(bool viewAll)
+        {
+            return _service.getActiveUsers(_authToken, viewAll);
+        }
+
         public bool RemoveSpace(string spaceKey)
         {
             return _service.removeSpace(_authToken, spaceKey);
