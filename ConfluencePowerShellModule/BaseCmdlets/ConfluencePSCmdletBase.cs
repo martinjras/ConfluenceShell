@@ -1,10 +1,9 @@
 ﻿using System.Management.Automation;
-using ConfluencePowerShellModule;
 
 namespace ConfluenceShell.BaseCmdlets
 {
     // ReSharper disable once InconsistentNaming
-    public class ConfluencePSCmdletBase : PSCmdlet
+    public class ConfluencePSCmdletBase : Cmdlet
     {
         [Parameter(Mandatory = true, HelpMessage = "Get a ConfluenceConnection by calling Get-ConfluenceConnection")]
         public ConfluenceConnection Connection { get; set; }

@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseCmdlets\UserPsCmdletBase.cs" />
     <Compile Include="Cmdlets\AddPermissionsToSpace.cs" />
     <Compile Include="Cmdlets\AddPermissionToSpace.cs" />
     <Compile Include="BaseCmdlets\SpacePsCmdletBase.cs" />
