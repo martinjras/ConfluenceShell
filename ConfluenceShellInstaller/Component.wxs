@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Fragment>
+    <ComponentGroup Id="ModuleComponents" Directory="INSTALLFOLDER">
+      <Component Id="CmpADComputerPsModule" Guid="*">
+        <File KeyPath="yes" Source="$(var.SolutionDir)\InputToWiX\ConfluenceShell.dll"  />
+        <File KeyPath="yes" Source="$(var.SolutionDir)\InputToWiX\ConfluenceShell.XmlSerializers.dll"  />
+
+        <Environment Id="AppendPSModulePath" Action="set" Name="PSModulePath" Part="last" System="yes" Value="[ProductFolder]" />
+      </Component>
+    </ComponentGroup>
+  </Fragment>
+</Wix>

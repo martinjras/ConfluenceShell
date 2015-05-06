@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
+     xmlns:ps="http://schemas.microsoft.com/wix/PSExtension">
+  <Product Id="*" Name="ConfluenceShell PowerShell Module" Language="1033" Version="0.0.0.1" Manufacturer="Martin Jæger" UpgradeCode="472007AA-C00C-40C0-B1DD-2894911937D2">
+    <Package InstallerVersion="405" Compressed="yes" InstallScope="perMachine" InstallPrivileges="elevated" Description="PowerShell module containing Cmdlets for administering Atlassian Confluence." />
+    
+    <MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+    <MediaTemplate EmbedCab="yes" />
+
+    <PropertyRef Id="ARPINSTALLLOCATION" />
+    <PropertyRef Id="INSTALLFOLDER" />
+
+    <PropertyRef Id="POWERSHELLVERSION"/>
+    <PropertyRef Id="POWERSHELL3VERSION" />
+    <Condition Message="Installing [ProductName] requires PowerShell Version 2.0 or later.">
+      <![CDATA[Installed OR (POWERSHELLVERSION >= "2.0" OR POWERSHELL3VERSION >= "2.0")]]>
+    </Condition>
+
+    <Feature Id="ModuleFeature" Title="Install ConfluenceShell PowerShell module" Level="1">
+      <ComponentGroupRef Id="ModuleComponents" />
+      <ComponentGroupRef Id="RegistryComponents" />
+    </Feature>
+
+    <Property Id="WIXUI_INSTALLDIR" Value="INSTALLFOLDER" />
+    <UIRef Id="WixUI_InstallDir" />
+  </Product>
+</Wix>
