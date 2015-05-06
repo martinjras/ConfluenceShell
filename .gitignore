@@ -218,5 +218,7 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+*.suo
+
 # Specific to ConfluenceShell
 InputToWix
