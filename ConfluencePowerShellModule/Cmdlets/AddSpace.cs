@@ -9,10 +9,10 @@ namespace ConfluenceShell.Cmdlets
     [Cmdlet(VerbsCommon.Add, Noun.Space)]
     public class AddSpace : SpacePsCmdletBase
     {
-        [Parameter(Mandatory = true, HelpMessage = "The name of the space")]
+        [Parameter(Mandatory = true, HelpMessage = "The name of the space", Position = 1)]
         public string Name { get; set; }
 
-        [Parameter(Mandatory = true, HelpMessage = "The description of the space")]
+        [Parameter(Mandatory = true, HelpMessage = "The description of the space", Position = 2)]
         public string Description { get; set; }
 
         protected override void ProcessRecord()
