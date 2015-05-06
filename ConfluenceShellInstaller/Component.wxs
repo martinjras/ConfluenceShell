@@ -2,11 +2,12 @@
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
   <Fragment>
     <ComponentGroup Id="ModuleComponents" Directory="INSTALLFOLDER">
-      <Component Id="CmpADComputerPsModule" Guid="*">
-        <File KeyPath="yes" Source="$(var.SolutionDir)\InputToWiX\ConfluenceShell.dll"  />
-        <File KeyPath="yes" Source="$(var.SolutionDir)\InputToWiX\ConfluenceShell.XmlSerializers.dll"  />
-
+      <Component Id="ConfluenceShellPSModule" Guid="*">
+        <File KeyPath="yes" Source="$(var.SolutionDir)\InputToWiX\ConfluenceShell.dll"   />
         <Environment Id="AppendPSModulePath" Action="set" Name="PSModulePath" Part="last" System="yes" Value="[ProductFolder]" />
+      </Component>
+      <Component Id="ConfluenceShellXmlSerializer" Guid="*">
+        <File KeyPath="yes" Source="$(var.SolutionDir)\InputToWiX\ConfluenceShell.XmlSerializers.dll"   />        
       </Component>
     </ComponentGroup>
   </Fragment>
