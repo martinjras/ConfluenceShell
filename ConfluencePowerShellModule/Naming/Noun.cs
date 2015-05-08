@@ -8,5 +8,6 @@
         public const string User = "User";
         public const string Users = "Users";
         public const string Page = "Page";
+        public const string Attachment = "Attachment";
     }
 }

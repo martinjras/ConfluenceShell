@@ -50,6 +50,7 @@
     <Compile Include="Cmdlets\AddPermissionsToSpace.cs" />
     <Compile Include="Cmdlets\AddPermissionToSpace.cs" />
     <Compile Include="BaseCmdlets\SpacePsCmdletBase.cs" />
+    <Compile Include="Cmdlets\AddAttachment.cs" />
     <Compile Include="Cmdlets\GetPage.cs" />
     <Compile Include="Cmdlets\EntityType.cs" />
     <Compile Include="Cmdlets\GetUsers.cs" />
@@ -58,6 +59,7 @@
     <Compile Include="Cmdlets\GetSpaceStatus.cs" />
     <Compile Include="Cmdlets\GetSpacePermissionSets.cs" />
     <Compile Include="Cmdlets\GetSpaceLevelPermissions.cs" />
+    <Compile Include="CmdletTypes\Attachment.cs" />
     <Compile Include="CmdletTypes\Page.cs" />
     <Compile Include="CmdletTypes\SpaceStatus.cs" />
     <Compile Include="CmdletTypes\SpacePermissionSet.cs" />
@@ -83,6 +85,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="Cmdlets\GetSpaces.cs" />
+    <Compile Include="Validation\ValidateFileExistsAttribute.cs" />
     <Compile Include="Web References\ConfluenceService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

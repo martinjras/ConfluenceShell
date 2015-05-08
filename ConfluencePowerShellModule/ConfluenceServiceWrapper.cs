@@ -41,18 +41,10 @@ namespace ConfluenceShell
             return _service.addSpaceWithDefaultPermissions(_authToken, remoteSpace);
         }
 
-        public RemoteAttachment Stuff()
+
+        public RemoteAttachment AddAttachment(RemoteAttachment attachment, long pageId, byte[] fileBytes)
         {
-            var attachment = new RemoteAttachment
-            {
-                comment = "Some Comment", contentType = "hmmm", created = null, creator = "admin",
-                fileName = "some word doc.docx",
-                pageId = 557154, title = "Hej title"
-            };
-
-            byte[] bytes = File.ReadAllBytes(@"C:\Users\saxouser\Desktop\test.docx");
-
-            return _service.addAttachment(_authToken, attachment, bytes);
+            return _service.addAttachment(_authToken, pageId, attachment, fileBytes);
         }
 
 
