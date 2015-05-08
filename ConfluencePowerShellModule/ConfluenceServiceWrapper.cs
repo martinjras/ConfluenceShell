@@ -1,4 +1,5 @@
-﻿using ConfluenceShell.CmdletTypes;
+﻿using System.IO;
+using ConfluenceShell.CmdletTypes;
 using ConfluenceShell.ConfluenceService;
 
 namespace ConfluenceShell
@@ -40,6 +41,21 @@ namespace ConfluenceShell
             return _service.addSpaceWithDefaultPermissions(_authToken, remoteSpace);
         }
 
+        public RemoteAttachment Stuff()
+        {
+            var attachment = new RemoteAttachment
+            {
+                comment = "Some Comment", contentType = "hmmm", created = null, creator = "admin",
+                fileName = "some word doc.docx",
+                pageId = 557154, title = "Hej title"
+            };
+
+            byte[] bytes = File.ReadAllBytes(@"C:\Users\saxouser\Desktop\test.docx");
+
+            return _service.addAttachment(_authToken, attachment, bytes);
+        }
+
+
         public RemoteSpace AddSpace(RemoteSpace remoteSpace)
         {
             return _service.addSpace(_authToken, remoteSpace);
@@ -78,6 +94,11 @@ namespace ConfluenceShell
         public bool RemoveSpace(string spaceKey)
         {
             return _service.removeSpace(_authToken, spaceKey);
+        }
+
+        public RemotePage GetPage(long pageId)
+        {
+            return _service.getPage(_authToken, pageId);
         }
 
         public string Login(string username, string password)

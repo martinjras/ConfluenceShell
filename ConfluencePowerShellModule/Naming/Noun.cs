@@ -7,5 +7,6 @@
         public const string Permissions = "Permissions";
         public const string User = "User";
         public const string Users = "Users";
+        public const string Page = "Page";
     }
 }

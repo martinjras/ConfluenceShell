@@ -50,6 +50,7 @@
     <Compile Include="Cmdlets\AddPermissionsToSpace.cs" />
     <Compile Include="Cmdlets\AddPermissionToSpace.cs" />
     <Compile Include="BaseCmdlets\SpacePsCmdletBase.cs" />
+    <Compile Include="Cmdlets\GetPage.cs" />
     <Compile Include="Cmdlets\EntityType.cs" />
     <Compile Include="Cmdlets\GetUsers.cs" />
     <Compile Include="Cmdlets\GetUser.cs" />
@@ -57,6 +58,7 @@
     <Compile Include="Cmdlets\GetSpaceStatus.cs" />
     <Compile Include="Cmdlets\GetSpacePermissionSets.cs" />
     <Compile Include="Cmdlets\GetSpaceLevelPermissions.cs" />
+    <Compile Include="CmdletTypes\Page.cs" />
     <Compile Include="CmdletTypes\SpaceStatus.cs" />
     <Compile Include="CmdletTypes\SpacePermissionSet.cs" />
     <Compile Include="CmdletTypes\Space.cs" />
