@@ -47,6 +47,10 @@ namespace ConfluenceShell
             return _service.addAttachment(_authToken, pageId, attachment, fileBytes);
         }
 
+        public bool AddLabelByName(string labelName, long objectId)
+        {
+            return _service.addLabelByName(_authToken, labelName, objectId);
+        }
 
         public RemoteSpace AddSpace(RemoteSpace remoteSpace)
         {
