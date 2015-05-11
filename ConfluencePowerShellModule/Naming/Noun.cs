@@ -9,5 +9,6 @@
         public const string Users = "Users";
         public const string Page = "Page";
         public const string Attachment = "Attachment";
+        public const string Groups = "Groups";
     }
 }

@@ -83,6 +83,11 @@ namespace ConfluenceShell
             return _service.getActiveUsers(_authToken, viewAll);
         }
 
+        public string[] GetGroups()
+        {
+            return _service.getGroups(_authToken);
+        }
+
         public bool RemoveSpace(string spaceKey)
         {
             return _service.removeSpace(_authToken, spaceKey);
