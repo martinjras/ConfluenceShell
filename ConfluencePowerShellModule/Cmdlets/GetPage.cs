@@ -8,7 +8,7 @@ namespace ConfluenceShell.Cmdlets
     [Cmdlet(VerbsCommon.Get, Noun.Page)]
     public class GetPage : ConfluencePSCmdletBase
     {
-        [Parameter(Mandatory = true, HelpMessage = "If of the page to get")]
+        [Parameter(Mandatory = true, HelpMessage = "Id of the page to get", Position = 0)]
         public long PageId { get; set; }
 
         protected override void ProcessRecord()
