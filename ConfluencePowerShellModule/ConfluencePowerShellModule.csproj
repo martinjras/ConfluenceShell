@@ -52,6 +52,7 @@
     <Compile Include="BaseCmdlets\SpacePsCmdletBase.cs" />
     <Compile Include="Cmdlets\AddAttachment.cs" />
     <Compile Include="Cmdlets\AddLabel.cs" />
+    <Compile Include="Cmdlets\GetLabels.cs" />
     <Compile Include="Cmdlets\GetPage.cs" />
     <Compile Include="Cmdlets\EntityType.cs" />
     <Compile Include="Cmdlets\GetGroups.cs" />
@@ -62,6 +63,7 @@
     <Compile Include="Cmdlets\GetSpacePermissionSets.cs" />
     <Compile Include="Cmdlets\GetSpaceLevelPermissions.cs" />
     <Compile Include="CmdletTypes\Attachment.cs" />
+    <Compile Include="CmdletTypes\Label.cs" />
     <Compile Include="CmdletTypes\Page.cs" />
     <Compile Include="CmdletTypes\SpaceStatus.cs" />
     <Compile Include="CmdletTypes\SpacePermissionSet.cs" />

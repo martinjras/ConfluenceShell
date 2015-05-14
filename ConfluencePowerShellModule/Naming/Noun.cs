@@ -11,5 +11,6 @@
         public const string Attachment = "Attachment";
         public const string Groups = "Groups";
         public const string Label = "Label";
+        public const string Labels = "Labels";
     }
 }
