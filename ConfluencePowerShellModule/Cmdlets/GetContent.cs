@@ -5,6 +5,7 @@ using ConfluenceShell.Naming;
 
 namespace ConfluenceShell.Cmdlets
 {
+    [Cmdlet(VerbsCommon.Get, Noun.Content)]
     public class GetContent : ConfluencePSCmdletBase
     {
         [Parameter(Mandatory = true, HelpMessage = "Id of the label to search content with")]
