@@ -107,6 +107,11 @@ namespace ConfluenceShell
             return _service.getLabelsById(_authToken, objectId);
         }
 
+        public RemoteSearchResult[] GetLabelContentById(long labelId)
+        {
+            return _service.getLabelContentById(_authToken, labelId);
+        }
+
         public string Login(string username, string password)
         {
             return _service.login(username, password);
