@@ -1,6 +1,4 @@
-﻿using System.IO;
-using ConfluenceShell.CmdletTypes;
-using ConfluenceShell.ConfluenceService;
+﻿using ConfluenceShell.ConfluenceService;
 
 namespace ConfluenceShell
 {
