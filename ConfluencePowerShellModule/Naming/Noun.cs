@@ -2,10 +2,9 @@
 {
     public static class Noun
     {
-        private const string Prefix = "Confluence";
+        private const string Prefix = "Cs";
 
         public const string Space = Prefix + "Space";
-        public const string Spaces = Prefix + "Spaces";
         public const string Permission = Prefix + "Permission";
         public const string Permissions = Prefix + "Permissions";
         public const string User = Prefix + "User";
