@@ -6,7 +6,7 @@ using ConfluenceShell.Naming;
 namespace ConfluenceShell.Cmdlets
 {
     [Cmdlet(VerbsCommon.Get, Noun.Label)]
-    public class GetLabels : ConfluencePSCmdletBase
+    public class GetLabel : ConfluencePSCmdletBase
     {
         [Parameter(Mandatory = true, HelpMessage = "Id of the object to get labels from", Position = 0)]
         public long ObjectId { get; set; }
