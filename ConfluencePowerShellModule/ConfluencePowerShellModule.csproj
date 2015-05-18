@@ -46,18 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseCmdlets\UserPsCmdletBase.cs" />
     <Compile Include="Cmdlets\AddPermissionsToSpace.cs" />
     <Compile Include="Cmdlets\AddPermissionToSpace.cs" />
     <Compile Include="BaseCmdlets\SpacePsCmdletBase.cs" />
     <Compile Include="Cmdlets\AddAttachment.cs" />
     <Compile Include="Cmdlets\AddLabel.cs" />
-    <Compile Include="Cmdlets\GetLabels.cs" />
+    <Compile Include="Cmdlets\GetLabel.cs" />
     <Compile Include="Cmdlets\GetContent.cs" />
     <Compile Include="Cmdlets\GetPage.cs" />
-    <Compile Include="Cmdlets\EntityType.cs" />
-    <Compile Include="Cmdlets\GetGroups.cs" />
-    <Compile Include="Cmdlets\GetUsers.cs" />
+    <Compile Include="CmdletTypes\EntityType.cs" />
+    <Compile Include="Cmdlets\GetGroup.cs" />
     <Compile Include="Cmdlets\GetUser.cs" />
     <Compile Include="Cmdlets\SetSpaceStatus.cs" />
     <Compile Include="Cmdlets\GetSpaceStatus.cs" />
@@ -90,7 +88,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="Cmdlets\GetSpaces.cs" />
     <Compile Include="Session\VariableNames.cs" />
     <Compile Include="Validation\ValidateFileExistsAttribute.cs" />
     <Compile Include="Web References\ConfluenceService\Reference.cs">

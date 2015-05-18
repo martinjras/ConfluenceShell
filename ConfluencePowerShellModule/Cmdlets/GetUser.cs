@@ -5,12 +5,28 @@ using ConfluenceShell.Naming;
 
 namespace ConfluenceShell.Cmdlets
 {
-    [Cmdlet(VerbsCommon.Get, Noun.User)]
-    public class GetUser : UserPsCmdletBase
+    [Cmdlet(VerbsCommon.Get, Noun.User, DefaultParameterSetName = AllUsers)]
+    public class GetUser : ConfluencePSCmdletBase
     {
+        private const string SingleUser = "SingleUser";
+        private const string AllUsers = "AllUsers";
+
+        [Parameter(Mandatory = true, HelpMessage = "Username of a user", Position = 0, ParameterSetName = SingleUser)]
+        public string Username { get; set; }
+
         protected override void ProcessRecord()
         {
-            WriteObject(new User(Service.GetUser(Username)));
+            if (ParameterSetName == SingleUser)
+            {
+                WriteObject(new User(Service.GetUser(Username)));
+            }
+            else
+            {
+                foreach (var user in Service.GetUsers(true))
+                {
+                    WriteObject(user);
+                }
+            }
         }
     }
 }

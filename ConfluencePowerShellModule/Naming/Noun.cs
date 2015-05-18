@@ -8,7 +8,6 @@
         public const string Permission = Prefix + "Permission";
         public const string Permissions = Prefix + "Permissions";
         public const string User = Prefix + "User";
-        public const string Users = Prefix + "Users";
         public const string Page = Prefix + "Page";
         public const string Attachment = Prefix + "Attachment";
         public const string Group = Prefix + "Group";
