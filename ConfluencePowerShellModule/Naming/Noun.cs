@@ -13,7 +13,6 @@
         public const string Attachment = Prefix + "Attachment";
         public const string Groups = Prefix + "Groups";
         public const string Label = Prefix + "Label";
-        public const string Labels = Prefix + "Labels";
         public const string Content = Prefix + "Content";
         public const string Connection = Prefix + "Connection";
     }
