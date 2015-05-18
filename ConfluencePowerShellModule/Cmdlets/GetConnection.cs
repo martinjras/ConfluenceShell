@@ -1,11 +1,11 @@
 using System.Management.Automation;
-using ConfluencePowerShellModule;
 using ConfluencePowerShellModule.Extensions;
+using ConfluenceShell.Naming;
 
 namespace ConfluenceShell.Cmdlets
 {
-    [Cmdlet(VerbsCommon.Get, "ConfluenceConnection")]
-    public class GetConfluenceConnection : PSCmdlet
+    [Cmdlet(VerbsCommon.Get, Noun.Connection)]
+    public class GetConnection : PSCmdlet
     {
         [Parameter(Mandatory = true, HelpMessage = "Credentials used to connect to Confluence. Don't use domain pre/postfix. Just the username.")]
         public PSCredential Credentials { get; set; }

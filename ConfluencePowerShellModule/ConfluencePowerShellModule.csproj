@@ -81,7 +81,7 @@
     <Compile Include="ConfluenceConnection.cs" />
     <Compile Include="ConfluenceServiceWrapper.cs" />
     <Compile Include="Extensions\SecureStringExtensions.cs" />
-    <Compile Include="Cmdlets\GetConfluenceConnection.cs" />
+    <Compile Include="Cmdlets\GetConnection.cs" />
     <Compile Include="Cmdlets\AddSpace.cs" />
     <Compile Include="Cmdlets\GetSpace.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

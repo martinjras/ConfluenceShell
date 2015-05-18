@@ -2,16 +2,20 @@
 {
     public static class Noun
     {
-        public const string Space = "Space";
-        public const string Permission = "Permission";
-        public const string Permissions = "Permissions";
-        public const string User = "User";
-        public const string Users = "Users";
-        public const string Page = "Page";
-        public const string Attachment = "Attachment";
-        public const string Groups = "Groups";
-        public const string Label = "Label";
-        public const string Labels = "Labels";
-        public const string Content = "Content";
+        private const string Prefix = "Confluence";
+
+        public const string Space = Prefix + "Space";
+        public const string Spaces = Prefix + "Spaces";
+        public const string Permission = Prefix + "Permission";
+        public const string Permissions = Prefix + "Permissions";
+        public const string User = Prefix + "User";
+        public const string Users = Prefix + "Users";
+        public const string Page = Prefix + "Page";
+        public const string Attachment = Prefix + "Attachment";
+        public const string Groups = Prefix + "Groups";
+        public const string Label = Prefix + "Label";
+        public const string Labels = Prefix + "Labels";
+        public const string Content = Prefix + "Content";
+        public const string Connection = Prefix + "Connection";
     }
 }

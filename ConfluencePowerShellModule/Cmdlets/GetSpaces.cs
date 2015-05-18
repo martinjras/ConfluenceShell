@@ -2,10 +2,11 @@
 using System.Management.Automation;
 using ConfluenceShell.BaseCmdlets;
 using ConfluenceShell.CmdletTypes;
+using ConfluenceShell.Naming;
 
 namespace ConfluenceShell.Cmdlets
 {
-    [Cmdlet(VerbsCommon.Get, "Spaces")]
+    [Cmdlet(VerbsCommon.Get, Noun.Spaces)]
     public class GetSpaces : ConfluencePSCmdletBase
     {
         protected override void ProcessRecord()
