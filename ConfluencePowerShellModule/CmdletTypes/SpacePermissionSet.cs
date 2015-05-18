@@ -1,5 +1,4 @@
 using System;
-using ConfluenceShell.Cmdlets;
 using ConfluenceShell.ConfluenceService;
 
 namespace ConfluenceShell.CmdletTypes

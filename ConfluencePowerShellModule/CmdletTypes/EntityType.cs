@@ -1,4 +1,4 @@
-namespace ConfluenceShell.Cmdlets
+namespace ConfluenceShell.CmdletTypes
 {
     public enum EntityType
     {
