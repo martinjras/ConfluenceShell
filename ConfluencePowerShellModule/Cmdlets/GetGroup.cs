@@ -4,8 +4,8 @@ using ConfluenceShell.Naming;
 
 namespace ConfluenceShell.Cmdlets
 {
-    [Cmdlet(VerbsCommon.Get, Noun.Groups)]
-    public class GetGroups : ConfluencePSCmdletBase
+    [Cmdlet(VerbsCommon.Get, Noun.Group)]
+    public class GetGroup : ConfluencePSCmdletBase
     {
         protected override void ProcessRecord()
         {
