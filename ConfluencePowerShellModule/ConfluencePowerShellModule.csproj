@@ -46,8 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cmdlets\AddPermissionsToSpace.cs" />
-    <Compile Include="Cmdlets\AddPermissionToSpace.cs" />
+    <Compile Include="Cmdlets\AddSpacePermission.cs" />
     <Compile Include="BaseCmdlets\SpacePsCmdletBase.cs" />
     <Compile Include="Cmdlets\AddAttachment.cs" />
     <Compile Include="Cmdlets\AddLabel.cs" />

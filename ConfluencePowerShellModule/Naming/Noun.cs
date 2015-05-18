@@ -6,7 +6,6 @@
 
         public const string Space = Prefix + "Space";
         public const string Permission = Prefix + "Permission";
-        public const string Permissions = Prefix + "Permissions";
         public const string User = Prefix + "User";
         public const string Page = Prefix + "Page";
         public const string Attachment = Prefix + "Attachment";
