@@ -15,14 +15,20 @@ namespace ConfluenceShell.Cmdlets
         [Parameter(Mandatory = true, HelpMessage = "The description of the space", Position = 2)]
         public string Description { get; set; }
 
+        [Parameter(HelpMessage = "If the space should use the default permissions configured by the system administrator")]
+        public SwitchParameter WithDefaultPermissions { get; set; }
+
         protected override void ProcessRecord()
         {
-            var space = Service.AddSpaceWithDefaultPermissions(new RemoteSpace
+            var newSpace = new RemoteSpace
             {
                 description = Description,
                 key = SpaceKey,
                 name = Name
-            });
+            };
+
+            var space = WithDefaultPermissions ? Service.AddSpaceWithDefaultPermissions(newSpace) 
+                : Service.AddSpace(newSpace);
 
             WriteObject(new Space(space));
         }
