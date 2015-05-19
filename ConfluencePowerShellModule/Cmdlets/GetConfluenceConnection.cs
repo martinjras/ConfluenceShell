@@ -5,8 +5,8 @@ using ConfluenceShell.Session;
 
 namespace ConfluenceShell.Cmdlets
 {
-    [Cmdlet(VerbsCommon.Get, Noun.Connection)]
-    public class GetConnection : PSCmdlet
+    [Cmdlet(VerbsCommon.Get, "Confluence" + Noun.Connection)]
+    public class GetConfluenceConnection : PSCmdlet
     {
         [Parameter(Mandatory = true, HelpMessage = "Credentials used to connect to Confluence. Don't use domain pre/postfix. Just the username.")]
         public PSCredential Credentials { get; set; }

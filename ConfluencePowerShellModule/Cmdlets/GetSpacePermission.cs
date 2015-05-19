@@ -6,8 +6,8 @@ using ConfluenceShell.Naming;
 
 namespace ConfluenceShell.Cmdlets
 {
-    [Cmdlet(VerbsCommon.Get, Noun.Space + "PermissionSets")]
-    public class GetSpacePermissionSets : SpacePsCmdletBase
+    [Cmdlet(VerbsCommon.Get, Noun.Space + "Permission")]
+    public class GetSpacePermission : SpacePsCmdletBase
     {
         protected override void ProcessRecord()
         {

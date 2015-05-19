@@ -2,7 +2,7 @@
 {
     public static class Noun
     {
-        private const string Prefix = "Cs";
+        private const string Prefix = "";
 
         public const string Space = Prefix + "Space";
         public const string Permission = Prefix + "Permission";
