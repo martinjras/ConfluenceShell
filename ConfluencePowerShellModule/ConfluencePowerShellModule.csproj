@@ -34,9 +34,10 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Management.Automation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\WindowsPowerShell\3.0\System.Management.Automation.dll</HintPath>
+      <HintPath>..\packages\System.Management.Automation.6.1.7601.17515\lib\net40\System.Management.Automation.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
@@ -115,6 +116,7 @@
     </WebReferenceUrl>
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
