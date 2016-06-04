@@ -10,6 +10,7 @@ namespace ConfluenceShell.CmdletTypes
         public string Name { get; set; }
         public SpaceType Type { get; set; }
         public string Url { get; set; }
+        public string Description { get; set; }
 
         internal Space(RemoteSpaceSummary space)
         {
@@ -22,6 +23,7 @@ namespace ConfluenceShell.CmdletTypes
             if (space.GetType() == typeof (RemoteSpace))
             {
                 HomePage = ((RemoteSpace)space).homePage;
+                Description = ((RemoteSpace)space).description;
             }            
         }
 
