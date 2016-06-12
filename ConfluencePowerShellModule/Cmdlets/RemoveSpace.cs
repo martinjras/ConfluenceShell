@@ -14,7 +14,7 @@ namespace ConfluenceShell.Cmdlets
         {
             if (ShouldProcess(SpaceKey, VerbsCommon.Remove))
             {
-                if (Force || ShouldContinue("Deleting a space can't be undone. Are you sure?", "Point of no return!"))
+                if (Force || ShouldContinue(string.Format("Are you sure you wish to delete the space '{0}'", SpaceKey), "Deleting a space can't be undone!"))
                 {
                     try
                     {
