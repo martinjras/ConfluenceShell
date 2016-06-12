@@ -1,17 +1,16 @@
 describe "Add-Space" {
 	
-	beforeEach {
-		#remove-space -SpaceKey "a" -Force -ErrorAction SilentlyContinue | out-null
+	beforeAll {
+		remove-space -SpaceKey "a" -Force -ErrorAction SilentlyContinue
 	}
 	
-	afterEach {
-		#remove-space -SpaceKey "a" -Force -ErrorAction SilentlyContinue | out-null
+	afterAll {
+		remove-space -SpaceKey "a" -Force -ErrorAction SilentlyContinue
 	}
-	
-	Add-Space -SpaceKey "a" -Name "b" -Description "c" | Out-Null
-	$space = Get-Space -SpaceKey "a"
 	
 	it "should set space properties" {
+        Add-Space -SpaceKey "a" -Name "b" -Description "c" | Out-Null
+	    $space = Get-Space -SpaceKey "a"
 		$space.SpaceKey 	| should be "a"
 		$space.Name 		| should be "b"
 		$space.Description 	| should be "c"
