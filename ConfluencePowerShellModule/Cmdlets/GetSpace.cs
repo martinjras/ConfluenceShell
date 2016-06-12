@@ -20,8 +20,16 @@ namespace ConfluenceShell.Cmdlets
         {
             if (ParameterSetName == SingleSpace)
             {
-                var space = new Space(Service.GetSpace(SpaceKey));
-                WriteObject(space);
+                try
+                {
+                    var space = new Space(Service.GetSpace(SpaceKey));
+                    WriteObject(space);
+                }
+                catch (System.Exception ex)
+                {
+                    WriteError(new ErrorRecord(ex, "GetSpaceError", ErrorCategory.ResourceUnavailable, SpaceKey));
+                }
+               
             }
             else
             {

@@ -1,15 +1,14 @@
 describe "Add-Space" {
 	
 	beforeEach {
-		remove-space -SpaceKey "a" -Verbose | out-null
-		add-space -SpaceKey "a" -Name "b" -Description "c" -WithDefaultPermissions | Out-Null
+		#remove-space -SpaceKey "a" -Force -ErrorAction SilentlyContinue | out-null
 	}
 	
 	afterEach {
-		remove-space -SpaceKey "a" -Verbose | out-null
+		#remove-space -SpaceKey "a" -Force -ErrorAction SilentlyContinue | out-null
 	}
 	
-	Add-Space -SpaceKey "a" -Name "b" -Description "c" -WithDefaultPermissions | Out-Null
+	Add-Space -SpaceKey "a" -Name "b" -Description "c" | Out-Null
 	$space = Get-Space -SpaceKey "a"
 	
 	it "should set space properties" {
@@ -19,5 +18,4 @@ describe "Add-Space" {
 		$space.HomePage		| should BeOfType System.Int64
 		$space.Url 			| should Not BeNullOrEmpty
 	}
-
 }
