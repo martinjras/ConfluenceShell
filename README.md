@@ -17,4 +17,4 @@ Well....the new REST API simply doesn't have the same functionality as the XML-R
 When Atlassian has implemented the same features in the REST API, it should be quite simple to point ConfluenceShell to that one.
 
 
-
+## Made in TFS ##
