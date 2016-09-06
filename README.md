@@ -15,6 +15,3 @@ So you might be wondering: why the F*** then use XML-RPC API?
 Well....the new REST API simply doesn't have the same functionality as the XML-RPC API yet. That's why :)
 
 When Atlassian has implemented the same features in the REST API, it should be quite simple to point ConfluenceShell to that one.
-
-
-## Made in TFS ##
